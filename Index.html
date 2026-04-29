@@ -1,148 +1,157 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Fachri Property - Hunian Nyaman Pontianak</title>
-
-<style>
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  line-height: 1.6;
-}
-
-header {
-  background: url('https://images.unsplash.com/photo-1568605114967-8130f3a36994') center/cover;
-  color: white;
-  text-align: center;
-  padding: 100px 20px;
-}
-
-header h1 {
-  font-size: 40px;
-}
-
-.btn {
-  background: green;
-  color: white;
-  padding: 12px 20px;
-  text-decoration: none;
-  display: inline-block;
-  margin-top: 15px;
-}
-
-section {
-  padding: 50px 20px;
-  text-align: center;
-}
-
-.features {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.feature {
-  width: 250px;
-  margin: 10px;
-}
-
-.gallery img {
-  width: 300px;
-  margin: 10px;
-  border-radius: 8px;
-}
-
-.form-box {
-  background: #f5f5f5;
-  padding: 30px;
-  display: inline-block;
-  border-radius: 10px;
-}
-
-input, button {
-  padding: 10px;
-  margin: 10px;
-  width: 80%;
-}
-
-footer {
-  background: #222;
-  color: white;
-  text-align: center;
-  padding: 20px;
-}
-</style>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fachri Property - Hunian Pontianak</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
 
-<!-- HERO -->
-<header>
-  <h1>Hunian Nyaman di Pontianak</h1>
-  <p>Rumah Strategis, Harga Terjangkau, Siap Huni</p>
-  <a class="btn" href="https://wa.me/6281234567890?text=Halo%20saya%20tertarik%20rumahnya">Chat WhatsApp</a>
+<body class="font-sans">
+
+<!-- HEADER -->
+<header class="bg-white shadow fixed w-full z-50">
+  <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
+    <h1 class="font-bold text-xl text-green-600">Fachri Property</h1>
+
+    <nav class="hidden md:flex gap-6">
+      <a href="#home">Home</a>
+      <a href="#listing">Listing</a>
+      <a href="#lokasi">Lokasi</a>
+      <a href="#kontak">Kontak</a>
+    </nav>
+
+    <a href="https://wa.me/6281234567890"
+      class="bg-green-500 text-white px-4 py-2 rounded">
+      Chat
+    </a>
+  </div>
 </header>
 
-<!-- KEUNGGULAN -->
-<section>
-  <h2>Kenapa Pilih Kami?</h2>
-  <div class="features">
-    <div class="feature">Lokasi Strategis</div>
-    <div class="feature">Harga Terjangkau</div>
-    <div class="feature">Bisa KPR</div>
-    <div class="feature">Legalitas Aman</div>
+<!-- HERO -->
+<section id="home" class="h-screen flex items-center justify-center text-center text-white"
+style="background:url('https://images.unsplash.com/photo-1568605114967-8130f3a36994') center/cover;">
+  <div class="bg-black/60 p-10 rounded">
+    <h1 class="text-4xl md:text-6xl font-bold mb-4">Hunian Nyaman Pontianak</h1>
+    <p class="mb-6">Rumah Strategis • Harga Terjangkau • Siap Huni</p>
+
+    <a href="https://wa.me/6281234567890"
+      class="bg-green-500 px-6 py-3 rounded-lg">
+      Konsultasi Sekarang
+    </a>
   </div>
 </section>
 
-<!-- DETAIL -->
-<section style="background:#fafafa;">
-  <h2>Tipe Rumah</h2>
-  <p><b>Tipe 36 / 72</b></p>
-  <p>2 Kamar Tidur | 1 Kamar Mandi | Dapur | Ruang Tamu</p>
-  <h3>Harga mulai Rp 150 Jutaan</h3>
+<!-- LISTING -->
+<section id="listing" class="py-16 text-center">
+  <h2 class="text-3xl font-bold mb-10">Daftar Rumah Tersedia</h2>
+
+  <div class="grid md:grid-cols-3 gap-6 px-6">
+
+    <!-- CARD -->
+    <div class="bg-white shadow rounded-lg overflow-hidden">
+      <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be" class="h-48 w-full object-cover">
+      <div class="p-4 text-left">
+        <h3 class="font-bold">Rumah Tipe 36</h3>
+        <p class="text-sm text-gray-500">Jl. Ahmad Yani, Pontianak</p>
+        <p class="text-green-600 font-bold mt-2">Rp 150 Jutaan</p>
+        <button onclick="pesan('Rumah Tipe 36 - Ahmad Yani')" 
+          class="mt-3 w-full bg-green-500 text-white py-2 rounded">
+          Tanya
+        </button>
+      </div>
+    </div>
+
+    <div class="bg-white shadow rounded-lg overflow-hidden">
+      <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2" class="h-48 w-full object-cover">
+      <div class="p-4 text-left">
+        <h3 class="font-bold">Rumah Minimalis</h3>
+        <p class="text-sm text-gray-500">Jl. Parit Haji Husin</p>
+        <p class="text-green-600 font-bold mt-2">Rp 175 Jutaan</p>
+        <button onclick="pesan('Rumah Minimalis - Parit Haji Husin')" 
+          class="mt-3 w-full bg-green-500 text-white py-2 rounded">
+          Tanya
+        </button>
+      </div>
+    </div>
+
+    <div class="bg-white shadow rounded-lg overflow-hidden">
+      <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6" class="h-48 w-full object-cover">
+      <div class="p-4 text-left">
+        <h3 class="font-bold">Rumah Modern</h3>
+        <p class="text-sm text-gray-500">Jl. Sungai Raya Dalam</p>
+        <p class="text-green-600 font-bold mt-2">Rp 200 Jutaan</p>
+        <button onclick="pesan('Rumah Modern - Sungai Raya Dalam')" 
+          class="mt-3 w-full bg-green-500 text-white py-2 rounded">
+          Tanya
+        </button>
+      </div>
+    </div>
+
+  </div>
 </section>
 
-<!-- GALERI -->
-<section>
-  <h2>Galeri Rumah</h2>
-  <div class="gallery">
-    <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be">
-    <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2">
-    <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6">
-  </div>
+<!-- LOKASI -->
+<section id="lokasi" class="py-16 bg-gray-100 text-center">
+  <h2 class="text-3xl font-bold mb-6">Lokasi</h2>
+  <p>Dekat pusat kota Pontianak</p>
+
+  <iframe class="mx-auto mt-6 w-full max-w-3xl h-64 rounded"
+    src="https://maps.google.com/maps?q=pontianak&t=&z=13&ie=UTF8&iwloc=&output=embed">
+  </iframe>
 </section>
 
 <!-- FORM -->
-<section>
-  <h2>Konsultasi / Booking</h2>
-  <div class="form-box">
-    <input type="text" id="nama" placeholder="Nama">
-    <input type="text" id="wa" placeholder="No WhatsApp">
-    <button onclick="kirimWA()">Kirim</button>
+<section id="kontak" class="py-16 text-center">
+  <h2 class="text-3xl font-bold mb-6">Konsultasi</h2>
+
+  <div class="max-w-md mx-auto shadow p-6 rounded">
+    <input id="nama" class="w-full p-3 border mb-3" placeholder="Nama">
+    <input id="wa" class="w-full p-3 border mb-3" placeholder="No WA">
+
+    <button onclick="kirim()" class="w-full bg-green-500 text-white py-3">
+      Kirim
+    </button>
   </div>
 </section>
 
-<!-- CTA -->
-<section style="background:#f5f5f5;">
-  <h2>Unit Terbatas! Segera Booking</h2>
-  <a class="btn" href="https://wa.me/6281234567890?text=Halo%20saya%20ingin%20survey">Jadwalkan Survey</a>
+<!-- KONTAK SOSIAL -->
+<section class="py-10 bg-green-500 text-white text-center">
+  <h2 class="text-2xl font-bold mb-4">Hubungi Kami</h2>
+
+  <div class="flex justify-center gap-6">
+    <a href="https://wa.me/6281234567890">WhatsApp</a>
+    <a href="https://instagram.com/fachriproperty.group">Instagram</a>
+    <a href="#">TikTok</a>
+  </div>
 </section>
 
-<footer>
-  <p>© 2026 Fachri Property Group</p>
+<!-- FOOTER -->
+<footer class="bg-gray-900 text-white text-center py-6">
+  <p>© 2026 Fachri Property</p>
 </footer>
 
+<!-- FLOAT WA -->
+<a href="https://wa.me/6281234567890"
+class="fixed bottom-5 right-5 bg-green-500 text-white px-4 py-3 rounded-full">
+💬 Chat
+</a>
+
 <script>
-function kirimWA() {
-  var nama = document.getElementById("nama").value;
-  var wa = document.getElementById("wa").value;
+function pesan(rumah) {
+  let url = "https://wa.me/6281234567890?text=" +
+  encodeURIComponent("Halo saya tertarik dengan " + rumah);
+  window.open(url);
+}
 
-  var pesan = "Halo, saya " + nama + " (" + wa + ") tertarik dengan rumahnya.";
-  var url = "https://wa.me/6281234567890?text=" + encodeURIComponent(pesan);
+function kirim() {
+  let nama = document.getElementById("nama").value;
+  let wa = document.getElementById("wa").value;
 
-  window.open(url, '_blank');
+  let url = "https://wa.me/6281234567890?text=" +
+  encodeURIComponent("Halo saya " + nama + " (" + wa + ") tertarik rumahnya");
+
+  window.open(url);
 }
 </script>
 
